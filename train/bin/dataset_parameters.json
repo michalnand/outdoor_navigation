@@ -1,0 +1,66 @@
+{
+  "width"         : 32,
+  "height"        : 32,
+  "grayscale"     : false,
+
+  "max_items_per_folder"  : 10000,
+
+  "classes count" : 4,
+
+  "training"      :
+  [
+    {
+      "class"     : 0,
+      "label"     : "road",
+      "path"      : "/home/michal/dataset/city_scapes/training_32/0"
+    },
+
+    {
+      "class"     : 1,
+      "label"     : "building",
+      "path"      : "/home/michal/dataset/city_scapes/training_32/3"
+    },
+
+    {
+      "class"     : 2,
+      "label"     : "vegetation",
+      "path"      : "/home/michal/dataset/city_scapes/training_32/5"
+    },
+
+    {
+      "class"     : 3,
+      "label"     : "sky",
+      "path"      : "/home/michal/dataset/city_scapes/training_32/6"
+    }
+  ],
+
+
+
+  "testing"      :
+  [
+    {
+      "class"     : 0,
+      "label"     : "road",
+      "path"      : "/home/michal/dataset/city_scapes/testing_32/0"
+    },
+
+    {
+      "class"     : 1,
+      "label"     : "building",
+      "path"      : "/home/michal/dataset/city_scapes/testing_32/3"
+    },
+
+    {
+      "class"     : 2,
+      "label"     : "vegetation",
+      "path"      : "/home/michal/dataset/city_scapes/testing_32/5"
+    },
+
+    {
+      "class"     : 3,
+      "label"     : "sky",
+      "path"      : "/home/michal/dataset/city_scapes/testing_32/6"
+    }
+  ]
+
+}

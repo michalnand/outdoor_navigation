@@ -1,0 +1,23 @@
+{
+  "input_width"   : 640,
+  "input_height"  : 480,
+  "camera_id"     : 1,
+  "visualisation" : true,
+
+
+  "image_recognition":
+  {
+    "network_input_height"  : 32,
+    "network_input_width"   : 32,
+
+    "min_x" : 0,
+    "max_x" : 1024,
+    "min_y" : 0,
+    "max_y" : 1024,
+
+    "stride_x": 32,
+    "stride_y": 32,
+
+    "cnn_config" : "net_4/trained/cnn_config.json"
+  }
+}
