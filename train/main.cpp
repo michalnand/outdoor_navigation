@@ -31,14 +31,20 @@ int main()
     }
     */
 
-
+    /*
     {
       ClassificationExperiment experiment(dataset, "net_4/");
       experiment.run();
     }
+    */
 
     {
       ClassificationExperiment experiment(dataset, "net_5/");
+      experiment.run();
+    }
+ 
+    {
+      ClassificationExperiment experiment(dataset, "net_6/");
       experiment.run();
     }
 
