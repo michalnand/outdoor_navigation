@@ -3,7 +3,7 @@
   "height"        : 32,
   "grayscale"     : false,
 
-  "max_items_per_folder"  : 10000,
+  "max_items_per_folder"  : 20000,
 
   "classes count" : 4,
 

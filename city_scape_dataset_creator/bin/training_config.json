@@ -1,7 +1,7 @@
 {
   "output_image_size" : 32,
   "image_step"        : 32,
-  "images_count"      : 20,
+  "images_count"      : 40,
   "random_mode"       : true,
 
   "output_dir"        : "/home/michal/dataset/city_scapes/training_32/",
