@@ -43,10 +43,6 @@ int main()
       experiment.run();
     }
  
-    {
-      ClassificationExperiment experiment(dataset, "net_6/");
-      experiment.run();
-    }
 
     std::cout << "program done\n";
 

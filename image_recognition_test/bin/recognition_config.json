@@ -1,6 +1,6 @@
 {
-  "input_width"   : 640,
-  "input_height"  : 480,
+  "input_width"   : 800,
+  "input_height"  : 600,
   "camera_id"     : 1,
   "visualisation" : true,
 
@@ -11,9 +11,9 @@
     "network_input_width"   : 32,
 
     "min_x" : 0,
-    "max_x" : 1024,
+    "max_x" : 2000,
     "min_y" : 0,
-    "max_y" : 1024,
+    "max_y" : 2000,
 
     "stride_x": 32,
     "stride_y": 32,

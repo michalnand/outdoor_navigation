@@ -5,6 +5,10 @@
 #include <json_config.h>
 #include <cnn.h>
 
+#include "image_recognition_result.h"
+
+
+
 class ImageRecognition
 {
   protected:
@@ -24,7 +28,7 @@ class ImageRecognition
     std::vector<std::vector<float>> palette;
 
   public:
-    std::vector<std::vector<int>> result;
+    std::vector<std::vector<ImageRecognitionResult>> result;
 
   public:
     ImageRecognition(Json::Value json_config, unsigned int width, unsigned int height);
@@ -50,6 +54,14 @@ class ImageRecognition
 
     int nn_process(std::vector<float> &image, unsigned int y, unsigned int x);
     unsigned int argmax(std::vector<float> &v);
+
+
+    std::vector<float> interpolate( ImageRecognitionResult &point_a,
+                                                      ImageRecognitionResult &point_b,
+                                                      ImageRecognitionResult &point_c,
+                                                      ImageRecognitionResult &point_d,
+                                                      float y,
+                                                      float x);
 
 };
 

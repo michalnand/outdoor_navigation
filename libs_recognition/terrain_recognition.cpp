@@ -3,7 +3,7 @@
 #include "opencv2/opencv.hpp"
 #include "image_recognition.h"
 
- 
+
 TerrainRecognition::TerrainRecognition(std::string json_config_file_name)
 {
   JsonConfig json(json_config_file_name);
@@ -27,7 +27,12 @@ int TerrainRecognition::run()
     unsigned int camera_id = json_config["camera_id"].asInt();
 
 
-    cv::VideoCapture camera(camera_id); // open the default camera
+    //cv::VideoCapture camera(camera_id); // open the default camera
+
+    cv::VideoCapture camera("http://80.242.36.63/mjpg/video.mjpg?resolution=1024x768&fps=1");
+
+    //cv::VideoCapture camera("http://80.242.36.69/mjpg/video.mjpg?resolution=640x480&fps=1");
+
     if (!camera.isOpened())  // check if we succeeded
       return -1;
 
@@ -59,7 +64,19 @@ int TerrainRecognition::run()
       auto output = vect_to_mat(vect, width, height);
 
       if (json_config["visualisation"].asBool())
+      {
+        for (unsigned int y = 0; y < image_recognition.result.size(); y++)
+        for (unsigned int x = 0; x < image_recognition.result[y].size(); x++)
+        {
+          auto item = image_recognition.result[y][x];
+          std::string label = std::to_string(item.class_id());
+          cv::putText(output, label, cvPoint(item.x(), item.y()),
+          cv::FONT_HERSHEY_COMPLEX_SMALL, 0.8, cvScalar(100,100,100), 1, CV_AA);
+        }
+
         cv::imshow("Frame", output);
+
+      }
     }
 
 
